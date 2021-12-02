@@ -1,8 +1,4 @@
-# Pancake Router
-
-### Bsc-Test
-
-The following assumes the use of `node@>=10`.
+# CD3D Router
 
 ## Install Dependencies
 

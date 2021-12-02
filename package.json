@@ -1,14 +1,10 @@
 {
-  "name": "pancakeswap-peripheral",
-  "version": "1.1.0-beta.0",
-  "description": "🎚 Peripheral smart contracts for interacting with pancake",
+  "name": "cd3d_finanace_periphery",
+  "version": "1.0.0",
+  "description": "Periphery contracts for CD3D protocal",
+  "author": "Hosokawa Zen",
   "engines": {
     "node": ">=10"
-  },
-  "homepage": "https://pancakeswap.finance",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pancakeswap/pancake-swap-periphery.git"
   },
   "files": [
     "build",
@@ -24,6 +20,7 @@
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
     "ethereum-waffle": "^2.4.1",
     "ethereumjs-util": "^6.2.0",
     "mocha": "^6.2.2",
@@ -42,9 +39,10 @@
     "precompile": "yarn clean",
     "compile": "waffle .waffle.json",
     "postcompile": "yarn copy-v1-artifacts",
-    "pretest": "yarn compile",
     "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn test",
+    "deploy:local_test": "truffle deploy --network development",
+    "deploy:test": "truffle deploy --network bsctestnet"
   },
   "license": "GPL-3.0-or-later"
 }

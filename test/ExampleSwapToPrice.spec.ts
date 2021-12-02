@@ -1,7 +1,6 @@
 import chai, { expect } from 'chai'
 import { Contract } from 'ethers'
 import { MaxUint256 } from 'ethers/constants'
-import { BigNumber, bigNumberify, defaultAbiCoder, formatEther } from 'ethers/utils'
 import { solidity, MockProvider, createFixtureLoader, deployContract } from 'ethereum-waffle'
 
 import { expandTo18Decimals } from './shared/utilities'
@@ -38,7 +37,7 @@ describe('ExampleSwapToPrice', () => {
     swapToPriceExample = await deployContract(
       wallet,
       ExampleSwapToPrice,
-      [fixture.factoryV2.address, fixture.router.address],
+      [fixture.factory.address, fixture.router.address],
       overrides
     )
   })

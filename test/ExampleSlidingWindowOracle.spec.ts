@@ -62,7 +62,7 @@ describe('ExampleSlidingWindowOracle', () => {
     token1 = fixture.token1
     pair = fixture.pair
     weth = fixture.WETH
-    factory = fixture.factoryV2
+    factory = fixture.factory
   })
 
   // 1/1/2020 @ 12:00 am UTC
